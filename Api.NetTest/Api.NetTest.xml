@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.NetTest</name>
+    </assembly>
+    <members>
+        <member name="M:Api.NetTest.Controllers.JwtController.Login(Domain.Api.ViewModels.Login.LoginViewModel)">
+            <summary>
+            Controlador utilizado para loguear el usuario en la aplicación
+            Después de loguearse inserte el token con la palabra "bearer" y luego el token ej: bearer token
+            </summary>
+            <param name="model"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.PostApplicationUser(Domain.Api.ViewModels.Users.ApplicationUserViewModel)">
+            <summary>
+            Permite crear los usuarios de la aplicación, primero debe crearse el rol y enviarsele en el correspondiente parametro.
+            Al momento de crear un usuario, a este se le asigna de CONTRASEÑA  por defecto el nombre del usuario en minuscula.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.CreateRole(Domain.Api.ViewModels.Role.RoleViewModel)">
+            <summary>
+            Crea los roles de la aplicacion
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.GetUsers">
+            <summary>
+            Consulta el listado completo de usuarios de la aplicacion
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.UpdateUser(Domain.Api.ViewModels.Users.ApplicationUserViewModel)">
+            <summary>
+            Permite actualizar el usuario, pero no actualiza el balance del mismo.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.DeleteUser(Data.Api.Models.ApplicationUserDeleteViewModel)">
+            <summary>
+            Permite elminar el usuario, con su rol asociado
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.validateExistsUser(System.String)">
+            <summary>
+            Valida la existencia de un usuario en la base de datos
+            </summary>
+            <param name="username"></param>
+            <returns>Nombre de usuario</returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.Users.AdminController.ManagementBalance(Domain.Api.ViewModels.Users.ManageBalanceViewModel)">
+            <summary>
+            Permite sumar o restar al balance de un usuari, Para restar al blance solo envie el valor antepuesto del signo menos ej: -200
+            </summary>
+            <param name="balance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.HistoricalLogin.HistoricalLoginController.Historical">
+            <summary>
+            Permite obtener el historial de logueos en la aplicación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.UserSection.UserController.GetUser">
+            <summary>
+            Este endpoint permite consultar los datos del usuario que esta logueado en la aplicación
+            </summary>
+            <returns>Datos del usuario</returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.UserSection.UserController.BalanceTransfer(Domain.Api.ViewModels.Users.TransferViewModel)">
+            <summary>
+            Permite transferir fondos del balance del usuario actual al balance del username que se indica en el viewmodel
+            </summary>
+            <param name="model">Balance a transferir y usuario al que se le va a tranferir</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.UsersWithOutSecurity.UserWithOutSecurityController.PostApplicationUser(Domain.Api.ViewModels.Users.ApplicationUserViewModel)">
+            <summary>
+            Permite crear los usuarios de la aplicación, primero debe crearse el rol y enviarsele en el correspondiente parametro.
+            Al momento de crear un usuario, a este se le asigna de CONTRASEÑA  por defecto el nombre del usuario en minuscula.
+            (NO TIENE SEGURIDAD, SE CREO PARA QUE CREE EL PRIMER USUARIO SIN ESTAR LOGUEADO)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Controllers.UsersWithOutSecurity.UserWithOutSecurityController.CreateRole(Domain.Api.ViewModels.Role.RoleViewModel)">
+            <summary>
+            Acción que crea roles en la aplicación (PERMITE CREAR UN ROL SE CREO PARA QUE CREE EL PRIMER USUARIO SIN ESTAR LOGUEADO)
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.NetTest.Extensions.MyEnumExtensions.ToDescriptionString(System.Enum)">
+            <summary>
+            Este metodo permite obtener la descripción de un enumerador de la aplicación
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
